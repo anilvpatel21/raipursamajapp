@@ -1,0 +1,1 @@
+SELECT COUNT(DISTINCT(phone)), count(distinct (case when status='sent' then phone end)) as 'Sent', count(distinct (case when status='delivered' then phone end)) as 'Delivered', count(distinct (case when status='read' then phone end)) as 'Read' FROM `seen` ORDER BY `id` DESC
